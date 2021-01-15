@@ -1,0 +1,11 @@
+voting web application using python, html, css, javascript, react and django to handle the server and database
+
+it works using the django framework
+
+-includes voting page
+
+-admin dashboard to add candidates
+
+-OTP simulation page
+
+

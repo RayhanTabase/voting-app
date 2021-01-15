@@ -1,0 +1,61 @@
+{% extends "voting/layout.html" %}
+
+{% block title %} Admin {% endblock %}
+
+{% block body %}
+    <div class="admin-options" style="text-align:center">
+        {% comment %} <input type="checkbox" name="voters_check" id="check_voters" class="btn btn-outline-primary btn-sm" value="Core"><label for="voters_check">Check Voters</label> {% endcomment %}
+
+         <button type="checkbox" id="check_voters" class="btn btn-outline-primary btn-sm">Check Voters</button>
+         <button type="checkbox" id="create_candidate" class="btn btn-outline-primary btn-sm">Create Candidate</button>
+
+        <div class = "approve_voter" style="display:none">
+
+            <h1> Approve the following users </h1>
+
+            {% for user in voters %}
+    
+                <form action="#" method="post">
+                    {% csrf_token %} 
+                    <input name="user" value="user.id">
+                    <input class="btn btn-primary" type="submit" value="Approve">
+                </form>
+
+            {% endfor %}
+        </div>
+
+         
+
+        <div class = "add candidate" style="display:block">
+            <h1>Add a candidate</h1>
+    
+            <form action="{% url "create_candidate" %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <input autofocus class="form-control" type="text" name="name" placeholder="Candidate Name">
+                </div>
+                <div class="form-group">
+                    {% comment %} <input autofocus class="form-control" type="text" name="position" placeholder="Position"> {% endcomment %}
+                    <select name="position" class="form-control" required>
+                        <option disabled selected value> -- select an position -- </option>
+
+                        {% for position in positions %}
+
+                            <option> {{position}}   </option>
+
+                        {% endfor %}
+                    <select>
+
+                </div>
+                <div class="form-group">
+                    <input autofocus class="form-control" type="file" name="picture" placeholder="picture">
+                </div>
+
+                <input class="btn btn-primary" type="submit" value="Add">
+            </form>
+        </div>
+
+    </div>
+
+{% endblock %}

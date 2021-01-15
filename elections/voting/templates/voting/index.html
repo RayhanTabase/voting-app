@@ -1,0 +1,35 @@
+{% extends 'voting/layout.html' %}
+{% load static %}
+
+
+
+{% block script %}
+    <script type="text/babel" src="{% static 'voting/js/index.js' %}"></script> 
+{% endblock %}
+
+{% block body %}
+    <div id="body-header">
+        <div>
+            
+            <div class="text-area">     
+                <h1>CCHN - Winneba</h1>
+                <p style="margin:0">College of Community Health Nursing </p>
+                <p style="margin:0">2020/21 Academic year Elections </p>
+            </div>
+        
+
+            <div id="view-btns">
+                <button  id="core-member-view" class="btn btn-lg">Core Members</button> 
+                <button  id="aux-member-view" class="btn  btn-lg">Auxiliary Members</button>  
+            </div>
+        </div>
+    </div>
+
+   <div id="index">
+    
+   </div>
+    
+    </div>
+   
+
+{% endblock body %}

@@ -1,0 +1,36 @@
+{% extends "voting/layout.html" %}
+{% load static %}
+
+{% block title %} Enter Verification Code {% endblock %}
+
+{% block script %}
+    {% comment %} <script type="text/babel" src="{% static 'voting/js/otp.js' %}"></script>  {% endcomment %}
+    <script src="{% static 'voting/js/otp2.js' %}"></script> 
+{% endblock %}
+
+{% block body %}
+    <div style="text-align:center">
+        <h5>{{pin}}</h5>
+        <strong><h2 style="color:red">{{message}}</h2></strong>
+        <strong><h1 style="color:blue">Enter Pin</h1></strong>
+
+        <form action="{% url 'otp' %}" method="POST">
+            {% csrf_token %}
+            <div id="enter_pin">            
+                <input id="pin_input" type="number" name="pin" placeholder="enter 4 digit code" max="9999" min="1000" hidden>
+                <input type="text" class="input_box form-control" id="box_1" disabled>
+                <input type="text" class="input_box form-control" id="box_2" disabled>
+                <input type="text" class="input_box form-control" id="box_3" disabled>
+                <input type="text" class="input_box form-control" id="box_4" disabled>
+            </div>
+
+
+        
+            <input style="margin-top:5%" class="btn btn-primary" type="submit" value="Verify">
+        </form>
+
+        Did not receive message? <a href="#">Click Here</a>
+
+    </div>
+
+{% endblock %}
