@@ -198,15 +198,13 @@ def send_otp(request):
 @login_required
 def get_candidates(request,position):
 
-    if position == "1":
-        candidates = Candidate.objects.filter(position="president") 
-    elif position == "2":
-        candidates = Candidate.objects.filter(position="vice")
-    else:
-        # candidates = Candidate.objects.all()
-        return HttpResponse(status=201)
+    index = int(position) - 1
+    position = POSITIONS[index]
+    
+    candidates = Candidate.objects.filter(position = position)
 
     return JsonResponse([candidate.serialize() for candidate in candidates],safe=False)
+
 
 
 
