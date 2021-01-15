@@ -2,10 +2,10 @@ voting web application using python, html, css, javascript, react and django to 
 
 it works using the django framework
 
--includes voting page
+-includes voting page where registered users can vote on a candidates per position
 
 -admin dashboard to add candidates
 
--OTP simulation page
+-OTP simulation page where user has to confirm by code sent to their mobile
 
 
