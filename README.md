@@ -1,5 +1,5 @@
 # voting-app
-Built this in a day.
+Built in a day.
 
 Voting web application using python, html, css, javascript, react and django to handle the server and database
 
