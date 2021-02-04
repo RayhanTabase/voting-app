@@ -39,5 +39,5 @@ class Candidate(models.Model):
         }
 
 class Unregistered(models.Model):
-        user = models.ForeignKey("User", on_delete=models.CASCADE,related_name="unregistered",unique=True)
+        user = models.OneToOneField("User", on_delete=models.CASCADE,related_name="unregistered")    #models.ForeignKey("User", on_delete=models.CASCADE,related_name="unregistered",unique=True)
         code = models.PositiveIntegerField()

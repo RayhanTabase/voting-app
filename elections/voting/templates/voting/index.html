@@ -4,32 +4,71 @@
 
 
 {% block script %}
-    <script type="text/babel" src="{% static 'voting/js/index.js' %}"></script> 
+    <script src="{%static 'voting/js/index1.js' %}"></script>
 {% endblock %}
 
-{% block body %}
-    <div id="body-header">
-        <div>
-            
-            <div class="text-area">     
-                <h1>CCHN - Winneba</h1>
-                <p style="margin:0">College of Community Health Nursing </p>
-                <p style="margin:0">2020/21 Academic year Elections </p>
-            </div>
-        
 
-            <div id="view-btns">
-                <button  id="core-member-view" class="btn btn-lg">Core Members</button> 
-                <button  id="aux-member-view" class="btn  btn-lg">Auxiliary Members</button>  
+{% block body %}
+    <div class="container">
+        <div id="message-voted">
+            <div class="pop-up">
+                <h2 class="message">YOU HAVE ALREADY VOTED IN THIS SECTION</h2>
+                <button class="close_btn">CLOSE</button> 
             </div>
         </div>
-    </div>
 
-   <div id="index">
-    
-   </div>
-    
+
+        <div class="container-index">
+
+            <div class="banner-index">  
+                <img src="{% static 'voting/cchn.jpeg' %}" > 
+                <div class="section-text">         
+                    <h1>MNHA - Winneba</h1>
+                    <p>College of Community Health Nursing </p>
+                    <p>2020/21 Academic year Elections </p>
+                </div>
+
+                <div class="section-btns">
+                    <button  id="core-member-view" class="active"><h2>Core Members</h2></button> 
+                    <button  id="aux-member-view"><h2>Auxiliary Members</h2></button>  
+                </div>
+            </div>
+
+
+
+            <main>
+                <div class="position-btns">
+                    
+                    {% for position in positions %}
+                        {% if position == "Presidential"%}
+                            <button class="active"><h3>{{position}}</h3></button>
+                        {% else %}
+                            <button ><h3>{{position}}</h3></button>
+                        {% endif %}
+                    {% endfor %}
+                
+                </div>
+
+                <div class="position-candidates">
+                    {% for candidate in candidates%}  
+                        <div class="container-card">
+                            <div class="card-hover_icon">
+
+                                <img src="{% static 'voting/finger.png' %}">
+                                <button class="vote-btn"><h3>VOTE</h3></button>
+                            
+                            </div>
+                            <div class="candidate">              
+                                <img  class="image" src={{candidate.picture.url}} alt="{{candidate.name}}"/>
+                                <p class="name" >Name Here </p>
+                                <p class="title" >Title Here</p>
+                                <p class="footer">Team Here</p>                            
+                            </div>
+                        </div>
+                    {% endfor %}     
+                </div>  
+            </main>
+        </div>
     </div>
    
-
 {% endblock body %}

@@ -12,7 +12,7 @@ from .models import *
 from .forms import *
 import random
 
-POSITIONS = ["President","Vice President","General Secretary","Financial Secretary","Public Relations","General Organizer","Cordinating Secretary","Secretary for Education","Pres and Information","Computer Prefect","Utility/Water Prefect"]
+POSITIONS = ["Presidential","Vice President","General Secretary","Financial Secretary","Public Relations","General Organizer","Cordinating Secretary","Secretary for Education","Pres and Information","Computer Prefect","Utility/Water Prefect"]
 
 
 
@@ -21,7 +21,12 @@ def index(request):
     if request.user.is_authenticated:
         
         if request.user.confirmed:
-            return render(request, "voting/index.html")
+            data={
+                "candidates":Candidate.objects.all(),
+                "positions":POSITIONS,
+
+            }
+            return render(request, "voting/index.html",data)
         else:
             return HttpResponseRedirect(reverse('otp'))
     else:

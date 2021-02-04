@@ -1,0 +1,448 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: white;
+}
+
+p {
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+button:focus {
+  outline: none;
+}
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  background: rgba(245, 245, 245, 0.767);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .navbar-logo {
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar .navbar-logo img {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin-left: 1.4em;
+  width: 150px;
+  height: 40px;
+  border: 2px solid #0a725a;
+  border-radius: 20px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#b0b4ec), to(rgba(208, 209, 228, 0.966)));
+  background: linear-gradient(#b0b4ec, rgba(208, 209, 228, 0.966));
+}
+
+.navbar ul li:hover {
+  border: 2px solid #08439c;
+  background: -webkit-gradient(linear, left top, left bottom, from(#848bec), to(rgba(89, 97, 243, 0.966)));
+  background: linear-gradient(#848bec, rgba(89, 97, 243, 0.966));
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  font-size: large;
+  font-weight: 700;
+  color: black;
+}
+
+.container-index {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.container-index .banner-index {
+  position: relative;
+  width: 100%;
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: linear-gradient(45deg, #08439c, #026951, #08439c, #026951);
+}
+
+.container-index .banner-index img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.2;
+}
+
+.container-index .banner-index .section-btns, .container-index .banner-index .section-text {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 7em;
+}
+
+.container-index .banner-index .section-text {
+  color: white;
+  height: 60%;
+  width: 100%;
+  padding-top: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container-index .banner-index .section-btns {
+  margin-top: 7em;
+  height: 25%;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-overflow: clip;
+}
+
+.container-index .banner-index .section-btns .active {
+  background-color: #c0b9b9;
+}
+
+.container-index .banner-index button {
+  width: 18em;
+  height: 5em;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.container-index main {
+  width: 100%;
+  height: 60%;
+  padding-left: 7em;
+  padding-right: 7em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 3em;
+}
+
+.container-index main .position-btns {
+  width: 22%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container-index main .position-btns button {
+  height: 3.5em;
+  min-height: 3em;
+  margin-bottom: 1.5em;
+  text-align: left;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 1rem;
+  overflow: hidden;
+  background: #a7a1a1;
+}
+
+.container-index main .position-btns .active {
+  background-color: #07ca90;
+}
+
+.container-index main .position-candidates {
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container-index main .position-candidates:last-child {
+  margin-bottom: 5em;
+}
+
+.container-index main .position-candidates .container-card {
+  width: 38%;
+  height: 450px;
+  margin-left: 2em;
+  margin-bottom: 2em;
+  border: 1px solid #ffa500;
+  border-radius: 2em;
+  overflow: hidden;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: .5s;
+  transition: .5s;
+  background: white;
+  min-width: 200px;
+}
+
+.container-index main .position-candidates .container-card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.container-index main .position-candidates .container-card:hover .candidate {
+  opacity: 0.25;
+}
+
+.container-index main .position-candidates .container-card:hover .card-hover_icon {
+  opacity: 1;
+}
+
+.container-index main .position-candidates .container-card .card-hover_icon {
+  background-color: gray;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: .1s;
+  transition: .1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+}
+
+.container-index main .position-candidates .container-card .card-hover_icon .vote-btn {
+  width: 10em;
+  height: 3em;
+  padding-left: .5em;
+  padding-right: .5em;
+  color: black;
+  background-color: transparent;
+  border-color: black;
+  border-width: .2em;
+}
+
+.container-index main .position-candidates .container-card .card-hover_icon .vote-btn h3 {
+  color: black;
+}
+
+.container-index main .position-candidates .container-card .candidate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.container-index main .position-candidates .container-card .candidate .image {
+  display: block;
+  height: 65%;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.container-index main .position-candidates .container-card .candidate .name, .container-index main .position-candidates .container-card .candidate .title, .container-index main .position-candidates .container-card .candidate .footer {
+  padding-top: .3em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.container-index main .position-candidates .container-card .candidate .name {
+  height: 10%;
+  padding-left: 2em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.container-index main .position-candidates .container-card .candidate .title {
+  height: 10%;
+  font-size: smaller;
+  padding-left: 2.5em;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.container-index main .position-candidates .container-card .candidate .footer {
+  height: 15%;
+  background-color: teal;
+  color: white;
+  padding-left: 2em;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+}
+
+#message-voted {
+  display: none;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.7);
+  width: 30%;
+  z-index: 200;
+  height: 30%;
+  min-width: 300px;
+  border: 2px solid;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#message-voted .pop-up {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#message-voted .pop-up h2 {
+  padding-top: 10%;
+}
+
+#message-voted .pop-up button {
+  width: 10em;
+  height: 3em;
+  padding-left: .5em;
+  padding-right: .5em;
+  margin-bottom: 2%;
+}
+
+#message-voted .pop-up button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#848bec), to(rgba(89, 97, 243, 0.966)));
+  background: linear-gradient(#848bec, rgba(89, 97, 243, 0.966));
+}
+
+/*##############################
+    footer styling
+################################
+*/
+footer {
+  background: linear-gradient(45deg, #08439c, #026951, #08439c, #026951);
+  text-align: center;
+  padding: 1.7em;
+  color: #f8f8f8a2;
+}
+/*# sourceMappingURL=style.css.map */

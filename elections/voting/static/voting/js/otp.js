@@ -53,14 +53,7 @@ class Input extends React.Component{
                     }     
                     console.log(num)
                 }    
-        
-        
-                
-        
-        
-                 
-        
-               
+
             })
         
         

@@ -1,0 +1,391 @@
+
+// ############# TOPOGRAPHY #####################
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1{
+    font-size: 3rem;
+    font-weight: 400;
+
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+h3{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: white;
+}
+
+p{
+    font-size: 1rem;
+}
+img{
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+button:focus{
+    outline: none;
+}
+
+
+
+
+
+//############### NAVBAR ###############//
+
+.navbar{
+    width: 100%;
+    height:70px;
+    background: rgba(245, 245, 245, 0.767);
+
+    display: flex;
+    justify-content: space-between;
+    padding-left:1.5em;
+    padding-right:1.5em;
+    align-items: center;
+
+    .navbar-logo{
+        width:250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 50%;
+            
+            object-fit:cover;
+
+        }
+        
+    }
+    
+
+    ul{
+        display: flex;
+        list-style: none;
+        
+        li{
+            margin-left: 1.4em;
+            width: 150px;
+            height: 40px;
+            border: 2px solid rgb(10, 114, 90);
+            border-radius: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgb(176, 180, 236),rgba(208, 209, 228, 0.966),);
+
+            &:hover{
+                border: 2px solid rgb(8, 67, 156);
+                background: linear-gradient(rgb(132, 139, 236),rgba(89, 97, 243, 0.966),);
+            }
+            
+            a{
+                text-decoration: none;
+                font-size: large;
+                font-weight: 700;
+                color: black;
+            }
+        
+            
+        }
+    }
+
+}
+
+
+//############### INDEX BODY ####################//
+
+.container-index{
+    // background: rgb(209, 203, 203);
+    display: flex;
+    flex-direction: column;
+    transition: .5s;
+   
+
+
+    .banner-index{
+        position: relative;
+        width: 100%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background:linear-gradient(45deg,rgb(8, 67, 156),rgb(2, 105, 81),rgb(8, 67, 156),rgb(2, 105, 81));       
+    
+
+        img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+            opacity: 0.2;
+        
+        }
+
+        .section-btns,.section-text{
+            position: relative;
+            display: flex;
+            padding-left: 7em;
+             
+        }
+
+        .section-text{
+            color: white;
+            height: 60%;
+            width: 100%;
+            padding-top: 3%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            
+        }
+
+        .section-btns{
+            margin-top: 7em;
+            height: 25%;
+            width: 100%;
+            flex-direction: row;
+            text-overflow: clip;
+            .active{
+                background-color: rgb(192, 185, 185);
+            }
+        }
+        button{
+            width:18em;
+            height:5em;
+            padding-left: .5em ;
+            padding-right:.5em ;
+        }
+
+
+    }
+
+    main{
+        width: 100%;
+        height: 60%;
+        padding-left: 7em;
+        padding-right: 7em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 3em;
+
+        .position-btns{
+            width: 22%;
+            display: flex;
+            flex-direction: column;
+
+            button{
+                height:3.5em;
+                min-height: 3em;
+                margin-bottom: 1.5em;
+                text-align: left;
+                padding-left: 1em;
+                padding-right: 1em;
+                font-size: 1rem;
+                overflow: hidden;
+                background: rgb(167, 161, 161);
+            }
+
+            .active{
+                background-color: rgb(7, 202, 144);
+            }  
+        }
+
+        .position-candidates{
+            width:75%;
+            display: flex;
+            flex-wrap: wrap;
+
+            &:last-child{
+                margin-bottom: 5em;
+            }
+
+            .container-card{
+                width: 38%;
+                height:450px;
+                margin-left: 2em;
+                margin-bottom: 2em;            
+                border:1px solid #ffa500;
+                border-radius: 2em;
+                overflow: hidden;
+                transform: scale(1);
+                transition: .5s;
+                background: white;
+                min-width: 200px;
+
+                &:hover{
+                    transform: scale(1.05);
+                    
+                    .candidate{
+                        opacity: 0.25;
+                    }
+
+                    .card-hover_icon{
+                        opacity: 1;
+                     
+                    }  
+                }
+
+                .card-hover_icon{
+                    background-color: gray;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    transition: .1s;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0;
+                   
+
+                    .vote-btn{
+                        width:10em;
+                        height:3em;
+                        padding-left: .5em ;
+                        padding-right:.5em ;
+                        color: black;
+                        background-color: transparent;
+                        border-color: black;
+                        border-width: .2em;
+                        h3{
+                            color: black;
+                        }
+
+                        
+                    }
+
+                }
+
+                
+                
+                .candidate{
+                    display: flex;
+                    flex-direction: column; 
+                    width: 100%;
+                    height: 100%; 
+                    
+                  
+                    .image{
+                        display: block;
+                        height: 65%;
+                        flex:3;
+                        order:1
+                        // border: 1px solid green;
+                    }
+                    
+                    .name,.title,.footer{                  
+                        padding-top: .3em;
+                        // border: 1px solid green;
+                        flex:1;
+                        
+                    }
+                    .name{
+                        height: 10%;
+                        padding-left: 2em;
+                        flex:1;
+                        order:2;
+                    }
+                    
+                    .title{
+                        height: 10%;
+                        font-size: smaller;
+                        padding-left: 2.5em;
+                        order:3;
+                        
+                    }
+                    .footer{
+                        height: 15%;
+                        background-color: teal;
+                        color:white;
+                        padding-left: 2em;
+                        order:4;                      
+                    }
+                }
+            }      
+        }
+    }
+}
+
+
+
+
+//######## POP-UP BOX ###########//
+#message-voted{
+    display: none;
+    position: fixed;
+    background: rgba(255,255,255,0.7);
+    width: 30%;
+    z-index: 200;
+    height: 30%;
+    min-width: 300px;
+    border: 2px solid ;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    
+    // show{
+    // top: 50%;
+    // left: 50%;
+    // transform:translate(-50%,-50%);
+    // }
+
+    // hide{
+    //     top:-50%;
+    // }
+    
+   
+    
+
+    .pop-up{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+
+        h2{
+            padding-top: 10%;
+        }
+
+        button{
+            width:10em;
+            height:3em;
+            padding-left: .5em ;
+            padding-right:.5em ;
+            margin-bottom: 2%;
+            &:hover{
+                background: linear-gradient(rgb(132, 139, 236),rgba(89, 97, 243, 0.966));
+            }
+        }
+    }
+
+}
+
+
+/*##############################
+    footer styling
+################################
+*/
+
+footer{
+    background:linear-gradient(45deg,rgb(8, 67, 156),rgb(2, 105, 81),rgb(8, 67, 156),rgb(2, 105, 81));
+    text-align: center;
+    padding: 1.7em;
+    color:#f8f8f8a2;    
+}
+
